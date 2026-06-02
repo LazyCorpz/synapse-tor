@@ -39,7 +39,7 @@
 1. Stop the service:
 
     ```shell
-    docker compose down
+    docker compose --profile production down
     ```
 
 [!TIP]
@@ -57,12 +57,13 @@ the configuration steps with your domain, rather than an `.onion` address.
 1. Run the service:
 
     ```shell
-    docker compose --profile production up -d nginx-debug
+    docker compose up -d grafana nginx-debug
     ```
 
 1. Stop the service:
 
     ```shell
+    docker compose down nginx-debug
     docker compose --profile production down
     ```
 
